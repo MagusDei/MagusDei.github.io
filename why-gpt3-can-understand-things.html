@@ -9,12 +9,15 @@ body {
 a {
     color: orangered;
 }
-section {
-    width: 100%;
-}
 section ul {
     list-style: none;
     text-align: left;
+    overflow-x: hidden;
+}
+@media (max-width: 620px) {
+    section ul {
+        padding: 0;
+    }
 }
 h1 {
     font-family: Helvetica, Arial, sans-serif;
