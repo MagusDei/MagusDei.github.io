@@ -1,0 +1,214 @@
+<head>
+<title>Why GPT-3 Can Understand Things</title>
+<style>
+body {
+    font-family: Book Antiqua, SegoeUI, Segoe UI, serif;
+    font-size: 17px;
+    margin: 0;
+}
+a {
+    color: orangered;
+}
+section ul {
+    list-style: none;
+    text-align: left;
+}
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+div.quote {
+    font: caption;
+    font-size: 16px;
+    margin-left: 1em;
+}
+div.wrapper {
+    margin: 0 auto;
+    max-width: 90%;
+    line-height: 1.5;
+    width: 50em;
+    text-align: justify;
+    padding: 0.5em 0;
+}
+p:target {
+    background-color: #eaf3ff;
+}
+section.black {
+    color: white;
+    background-color: black;
+}
+</style>
+</head>
+<body>
+
+<section>
+<div class="wrapper">
+
+<h1>Why GPT-3 Can Understand Things</h1>
+
+<p>No I'm not going to argue that GPT-3 understands things in the same way as a human; that would obviously be absurd, since it has no senses and no experience of any world outside of text. I'll simply argue that "understanding" is a good word for whatever it is that GPT-3 does. First, we'll have to explain what it means to understand something, thereby solving a philosophical problem that philosophers have been trying to solve for centuries.<sup>[<a href="#footnote1"  id="ref1">1</a>]</sup> But first we need to talk about <strike>parallel universes</strike> SHRDLU.</p>
+
+</div>
+</section>
+<section>
+<div class="wrapper">
+<h2>I.</h2>
+
+<p>SHRDLU (an abbreviation of nothing in particular<sup>[<a href="#footnote2"  id="ref2">2</a>]</sup>) was one of the first natural language understanding programs written by Terry Winograd (after whom Winograd schemas are named) in Lisp back in 1968. It had many advanced features like coreference resolution, and was capable of responding to complex commands in its "blocks world"<sup>[<a href="#footnote3"  id="ref3">3</a>]</sup> consisting of colored geometric shapes in various configurations.</p>
+
+<p>An example of SHRDLU output:</p>
+
+<div class="quote">
+<p>    Person: PICK UP A BIG RED BLOCK. </p>
+<p>    Computer: OK. (does it) </p>
+<p>    Person: GRASP THE PYRAMID. </p>
+<p>    Computer: I DON'T UNDERSTAND WHICH PYRAMID YOU MEAN. </p>
+<p>    Person: FIND A BLOCK WHICH IS TALLER THAN THE ONE YOU ARE HOLDING AND PUT IT INTO THE BOX. </p>
+<p>    Computer: BY "IT", I ASSUME YOU MEAN THE BLOCK WHICH IS TALLER THAN THE ONE I AM HOLDING. </p>
+<p>    Computer: OK. (does it) </p>
+<p>    Person: WHAT DOES THE BOX CONTAIN? </p>
+<p>    Computer: THE BLUE PYRAMID AND THE BLUE BLOCK.<sup>[<a href="#footnote4"  id="ref4">4</a>]</sup></p>
+</div>
+
+<p>I think there is clearly a sense in which SHRDLU can be said to understand language related to its blocks world. When you give it a command, it can understand your intent and carry it out to the best of its ability. Obviously everything is just dumb rules under the hood, but in common parlance I think we could sensibly ask questions like "does SHRDLU understand what 'the green thing' refers to?" without expecting an answer like "No, because SHRDLU is just a collection of rules and can't actually understand anything". I'm claiming that GPT-3 understands things in the same sense that SHRDLU does, nothing more, nothing less.</p>
+
+<p>You might be feeling disappointed right now. "But that's not an interesting claim! You're just saying that GPT-3 figuratively understands things. Everybody knows that!" I would reply in two ways: first, not everybody knows that. Some think that GPT-3 is not capable of tracking the kinds of world relationships that SHRDLU does above, like "x is inside of y". Gary Marcus  claims as much in his article "Experiments testing GPT-3's ability at commonsense reasoning: results."<sup>[<a href="#footnote5"  id="ref5">5</a>]</sup> However, critics have pointed out that these results suffer from poor prompting, and with a better prompting strategy GPT-3 is perfectly capable of tracking these things within the limits of its context window.<sup>[<a href="#footnote6"  id="ref6">6</a>]</sup><sup>[<a href="#footnote7"  id="ref7">7</a>]</sup><sup>[<a href="#footnote8"  id="ref8">8</a>]</sup></p>
+
+<p>Secondly, my use of the word "understand" is neither figurative nor metaphorical. I think the sense in which GPT-3 and SHRDLU can be said to understand things is more or less the same sense in which humans can be said to understand things. In other words, "understand" refers to the same phenomenon both in the case of GPT-3's understanding and human understanding.</p>
+
+<p>Note that I'm not claiming that GPT-3 understanding and human understanding are equivalent. There are clear differences: the most obvious one is that human understanding is always in some way ultimately grounded in sense experience (although with some caveats). I'm merely claiming that the word "understand" properly refers to a specific abstract property that GPT-3 understanding and human understanding have in common. So what is that property?</p>
+
+</div>
+</section>
+<section class="black">
+<div class="wrapper">
+
+<h2>II.</h2>
+
+<p>Let's go through some paradigmatic cases to help clarify our intuition about what it means to understand what a word or concept means. In particular, we want to distinguish "understanding" from mere "memorization" or "knowing". When we say that GPT-3 <i>understands</i> something, we are implicitly claiming that GPT-3 is not merely dumbly regurgitating facts from a memorized database.</p>
+
+<p>If a parrot has memorized that it should answer "four" when it hears the words "What is two plus two" in order to get a cashew nut, we don't say that it understands addition. So what do we mean when we say that somebody understands addition? Well, first of all, they can do it in multiple contexts. Not only can they answer "What is two plus two", they can also answer "What is two plus three", "What is 324 + 700" and so on. In other words, they have some rule or algorithm in mind that they can use to correctly answer any question of the form "What is x plus y?" You could also phrase this as them having a statistical model in mind that they can use to predict with (almost) perfect confidence what the answer to any addition problem is.</p>
+
+<p>A common refrain against the concept of GPT-3 understanding anything is that "it's just statistics". This is either vacuous or mistaken. Yes, there is a general sense in which what GPT-3 does is "just" statistical inference, because the task of predicting the next word in a text is a statistical inference task! This is vacuous as an argument because it would apply equally well to a system that uses Amazon's mechanical turk to get a person to do the same task. Would we say that the person doesn't <i>actually</i> understand the text, because they are just doing statistical inference, to predict what the next word will be? If you are defining statistical inference this broadly, then the human brain is also "just statistics".</p>
+
+<p>When people use the "just statistics" argument, they aren't generally referring to the above, vacuous form of argumentation. Rather, they are making a stronger claim: they believe that GPT-3 uses only surface-level statistical features to make its predictions of what the next word will be. That is to say, their mental model of GPT-3 appears to be something like "it looks at the words that came before, then looks at its memorized corpus and picks the most common continuation to that sequence of words." (Of course sampling is separate from determining probability distributions and GPT-3's elements are BPEs, not words, but you get the idea.) This model is mistaken for two reasons: first, it ignores the way GPT-3 makes use of embeddings. Second, this is basically just a description of how Markov Chains work, and we know those can't produce the same quality of output! We sure tried in the nineties.<sup>[<a href="#footnote9"  id="ref9">9</a>]</sup></p>
+
+<p>Markov models for language generation traditionally base their probabilities only on the actual words that appear in the text, without any encoding of semantic relationships between words (like "a dog is a kind of mammal" or "a king is a male royal leader"). However, neural net models generally do encode such relationships, in the form of word embeddings, and GPT-3 is no different in this regard.<sup>[<a href="#footnote10"  id="ref10">10</a>]</sup><sup>[<a href="#footnote11"  id="ref11">11</a>]</sup></p>
+
+<p>You can intuitively think of word embeddings as high-dimensional spaces where points correspond to words and directions correspond to relationships between words. So for example, you can think of the direction between the words "man" and "woman" as defining a kind of "masculinity-femininity axis", and do things like "start from the word queen and go in the masculine direction" to find the word "king". (This is represented mathematically by the vector operation "queen - woman + man = king") As you can see, word embeddings alone allow us to represent fairly complicated semantic relationships, so it's not unnatural to say that, in some sense, GPT-3 understands that "a dog is a small canine often kept as a pet". It is not only capable of dumbly regurgigating this fact, but actually using it when "thinking" of an appropriate continuation to a sentence.</p>
+
+<p>Returning to the example of addition, probably just being able to answer arbitrary addition problems and being able to apply the model of addition in the real world is enough to capture what most people would mean by "understanding addition". But of course there is also a deeper sense in which to understand addition, the way mathematicians understand it. Not only can they perform addition like everybody else, they can derive the laws of addition from deeper axioms (such as the Peano axioms). We could summarize this difference as "understanding how" vs. "understanding why": whereas most people understand the "how" of addition, generally only mathematicians and people in related fields understand the "why" of addition. "Understanding why" represents a sort of deeper understanding of the phenomenon under study.</p>
+
+<p>Feynman famously had this to say on why questions:</p>
+
+<div class="quote">
+<p>"But the problem, you see, when you ask why something happens, how does a person answer why something happens? For example, Aunt Minnie is in the hospital. Why? Because she went out, slipped on the ice, and broke her hip. That satisfies people. It satisfies, but it wouldn't satisfy someone who came from another planet and who knew nothing about why when you break your hip do you go to the hospital. How do you get to the hospital when the hip is broken? Well, because her husband, seeing that her hip was broken, called the hospital up and sent somebody to get her. All that is understood by people. And when you explain a why, you have to be in some framework that you allow something to be true. Otherwise, you're perpetually asking why. Why did the husband call up the hospital? Because the husband is interested in his wife's welfare. Not always, some husbands aren't interested in their wives' welfare when they're drunk, and they're angry.</p>
+
+<p>"... So I am not going to be able to give you an answer to why magnets attract each other except to tell you that they do. And to tell you that that's one of the elements in the world - there are electrical forces, magnetic forces, gravitational forces, and others, and those are some of the parts. If you were a student, I could go further. I could tell you that the magnetic forces are related to the electrical forces very intimately, that the relationship between the gravity forces and electrical forces remains unknown, and so on. But I really can't do a good job, any job, of explaining magnetic force in terms of something else you're more familiar with, because I don't understand it in terms of anything else that you're more familiar with."<sup>[<a href="#footnote12"  id="ref12">12</a>]</sup></p>
+</div>
+
+<p>What Feynman is getting at here is that an answer to a why question is a kind of mental model that can connect disparate phenomena together, and in particular there is a sort of hierarchical structure where deeper models explain the observations in shallow models. In other words, the scientific process starts with some collection of observations or basic data, builds models to explain and predict parts of that data, then build deeper models to explain and connect the shallow models etc. The key point is that you can derive or recover the shallower models (and ultimately, the original data) from the deeper ones (in a lossy way).</p>
+
+<p>In other words, we can think of scientific models (and mental models more generally) as being like hierarchies of lossy compressions of some ground data provided by observations and experiments. You create the model by compression, and you make predictions by decompression. Of course, not <i>all</i> compressions can be used to predict future observations. We can compress all of Euclidean geometry into five axioms and some general deduction rules, but we can't (generally speaking) meaningfully "predict" interesting theorems in geometry from simply looking at these axioms.</p>
+
+<p>Any model that allows you to predict data also allows you to compress it, because if you have a set of data and a model that can predict all the values in the data set from a subset of the data, you can reduce your data to just that subset -- after all, your predictive model can recover the rest of the data from that subset. Thus we say that "prediction is compression".</p>
+
+<p>So "understanding how" comes down to prediction and predictive models, while "understanding why" comes down to compression and hierarchies of compressive models. But because prediction is compression, we can summarize both as forms of compression. Viewed mathematically, the core component of what we call "understanding" is simply data compression. This is the abstract property that GPT-3 understanding and human understanding have in common which I referred to earlier.</p>
+
+<p>GZip is an algorithm that can compress any data, but its compression is far from optimal; it is a "shallow model" that only makes use of the superficial, surface features of the data given to it. The "depth" of a model is roughly given by its effectiveness in compressing larger and larger amounts of more and more diverse data. Maxwell's equations allow us to compress practically all electrical and magnetic observations (i.e. electrical and magnetical data sets) to just four equations. Thus they represent a deep, but domain-specific compression.</p>
+
+</div>
+</section>
+<section>
+<div class="wrapper">
+
+<h2>III.</h2>
+
+<p>Why is there such vehement disagreement on the point of whether GPT-3 can understand anything? I think it comes down to different thinking styles. It is often not realized how different people's ways of thinking really are. It is not quite accurate to say that all people have the same cognitive processes; rather, thinking styles are constructed over a lifetime.<sup>[<a href="#footnote13"  id="ref13">13</a>]</sup></p>
+
+<p>My headcanon is that thinking styles can be separated into three main types, namely visual, verbal and non-symbolic, and that each person has a primary thinking style, an auxiliary thinking style, and a weak thinking style. For example, my primary is verbal, my auxiliary is non-symbolic, and my weakness is visual thinking.<sup>[<a href="#footnote14"  id="ref14">14</a>]</sup></p>
+
+<p>Verbal and visual thinking are mostly self-explanatory (unless you are an aphantasiac, that is, or the verbal equivalent, which also exists<sup>[<a href="#footnote15"  id="ref15">15</a>]</sup>). How about non-symbolic thinking? The best way I can explain it is that it similar to the Feynman algorithm: "Just write down the problem, think really hard, and write down the solution." What is this thinking? Nothing in particular. Just focusing on an abstract concept directly in your mind. There are no real "qualia" associated with this kind of thinking. It's more like a bare "knowing" without experience.<sup>[<a href="#footnote16"  id="ref16">16</a>]</sup></p>
+
+<p>Just like you can see a tree and simply know "This is a tree"; now close your eyes, but keep the "knowing". This is the crux of non-symbolic thinking. However, it's not simply a passive knowing. You can do certain kinds of, "operations", for lack of a better term, to manipulate your focus on the abstract concept, and thereby develop new insights.</p>
+
+<p>Non-symbolic thinking as a primary mode is possible<sup>[<a href="#footnote17"  id="ref17">17</a>]</sup>, and it does not limit you to only manual vocations. One non-symbolic primary I know works as a data scientist. I conceive of GPT-3's "understanding" as being very similar to this non-symbolic thinking. A sort of bare awareness of abstract relationships. Because this sort of thinking is familiar to me, it doesn't appear intuitively strange to me to call the thing that GPT-3 does understanding.</p>
+
+<p>But consider somebody whose primary mode is visualization and weakness non-symbolic thinking. Such people understand the world in a strongly visual way. For example, when they hear the sentence "I fell of the roof" and understand that this probably means the speaker is or was in pain, they don't merely understand it as a direct knowing (like a non-symbolic thinker) or verbally (i.e. thinking something like "That must have hurt"), they actually visualize falling off the roof and the pain that would cause. And to them, it's probably deeply strange that you could understand the sentence in any other way! To them, being able to do these sorts of visualizations simply <i>is</i> understanding, and they may not even have realized that there are other ways to understand things. So of course to them it would appear obvious that GPT-3 can't understand anything, since it can't visualize anything, or simulate any other sort of sense data.</p>
+
+</div>
+</section>
+<section class="black">
+<div class="wrapper">
+
+<h2>IV.</h2>
+
+<p>Research has indicated that convolutional neural networks, like biological brains, tend to develop hierarchical layers of "semantic neurons" (or feature neurons) which correspond to specific features of the input data such as "curve in a specific orientation", "fur", "whiskers", "cat" etc.<sup>[<a href="#footnote18"  id="ref18">18</a>]</sup> Research by OpenAI shows that similar neurons spontaneously appear in language models as well<sup>[<a href="#footnote19"  id="ref19">19</a>]</sup> (as they likely do in all neural networks trained on sufficiently complex data with a sufficiently general learning algorithm). These semantic neurons can be thought of as feature-based "compressions" of the input data.</p>
+
+<p>A view has been emerging that large neural nets can be viewed as ensembles or collectives of smaller nets performing more specialized functions (the semantic neurons mentioned above are simply one example of this)<sup>[<a href="#footnote20"  id="ref20">20</a>]</sup><sup>[<a href="#footnote21"  id="ref21">21</a>]</sup> Based on this hypothesis, here's my intuitive model of how GPT-class models may work. I am by no means an expert, so take this section with a grain of salt.</p>
+
+<p>One of the common misconceptions about GPT-3 that we covered above was that it is only regurgitating word sequences it has memorized. To some degree this may be true. However, certainly on a sentence-level the large majority of its sentences seem to be unique. In other words, it doesn't seem to rely on regurgitation particularly more than the average human writer.<sup>[<a href="#footnote22"  id="ref22">22</a>]</sup> A larger point is that GPT-3 simply had too much training data to memorize all of it in its weights.<sup>[<a href="#footnote23"  id="ref23">23</a>]</sup></p>
+
+<p>Still, it's clear that it would be difficult for GPT-3 to induce the in-depth causal-spatial-temporal structure of the world from simply reading text (and in fact it tends to perform poorly at tasks which require spatial reasoning). Perhaps GPT-3 is capable of fairly complicated inferences, but the text generated by its predecessors is already fairly high-quality despite their more obviously limited resources. So how do GPT architectures generally work?</p>
+
+<p>I believe the answer may be that they do employ Markov chains. I envision an architecture where the network has an absurdly large collection of Markov chains with a relatively long sequence-length (improving coherence) together with some relatively simple detectors and rules which help it to decide which Markov chain should be active at any point in the sequence.<sup>[<a href="#footnote24"  id="ref24">24</a>]</sup> We already know that even simple RNNs can keep track of things like "is this dialogue or prose"; I presume that GPT-3 can track things like the different characters in a scene, who is speaking to whom, what the subject of discussion is etc.</p>
+
+<p>However, this of course is not a full explanation. If this was the only trick GPT architectures used, it would be instantly noticeable because the sequences produced could very often be found in the training data. So in addition to the memorized Markov chains, I believe that GPT models learn a large corpus of "translation functions" that allow them to translate between the outputs of different Markov chains. This can be used prosaically to translate between languages like English and German, but also to create accents, change tone and voice, and even to translate English into code and back (machine translation is, after all, basically neural style transfer for text). I believe the translation functions are even used for metaphor discovery, as in <a href="https://machinamenta.blogspot.com/2020/08/forming-extended-analogies-with-gpt-3.html">these</a> <a href="https://twitter.com/danielbigham/status/1295864369713209351">examples.</a></p>
+
+<p>Factual question-answering is likely done by a Watson-like setup of competing answerers, but since these answerers can be considered as extremely specific Markov chain generators, this is more or less a consequence of the preceding points.</p>
+
+</div>
+</section>
+<section>
+<div class="wrapper">
+
+<h2>V.</h2>
+
+<p>It may seem like I'm destroying the magic of GPT-3 by attempting a reductive explanation like this. However, I believe all of this is not too different from what the language centers of the human brain do.</p>
+
+<p>You might object that artificial neural networks are nothing like human brains. Even famous researcher Yann LeCun said as much in 2015: "while Deep Learning gets an inspiration from biology, it’s very, very far from what the brain actually does".<sup>[<a href="#footnote25"  id="ref25">25</a>]</sup> In reality the matter is quite nuanced, however. Saying that ANNs do not resemble human brains is a lot like claiming that brains aren't computers. This statement is either vacuously true or vacuously false. If by "computer" you mean a "von Neumann machine," then of course the brain is not a computer. If you use "computer" in the sense this word is used in the term "computer science", then of course the brain is just a massively parallel computer (i.e. system that performs computations).<sup>[<a href="#footnote26"  id="ref26">26</a>]</sup></p>
+
+<p>Similarly, an ANN is obviously not an accurate simulation of neuron behaviour: there's no model of neurophysiology, neurochemistry, frequency-based signalling etc. But it cannot be denied that the basic ideas of ANNs were derived from simple models of biological neural networks, and they do seem to plausibly belong to the same "class" of computers. Certainly ANNs resemble brains much more than they do GPUs or cellular automata.</p>
+
+<p>Not only do ANNs in fact resemble biological neural networks in meaningful ways, results from analysis of deep learning models have actually inspired modern neuroscience. The discovery in the early 2010s that CNNs are effective models for classifying image data prompted research in finding analogous systems in human brains, leading to natural image statistics and the discovery of a hierarchy of neural representations along the ventral stream.<sup>[<a href="#footnote27"  id="ref27">27</a>]</sup><sup>[<a href="#footnote28"  id="ref28">28</a>]</sup></p>
+
+<p>Therefore, it seems plausible to me that Transformer-style models may well resemble the networks in the language centers of the brain. In other words, GPT-3 is not like a human brain. It is just like a part of one.</p>
+</div>
+</section>
+<section>
+<div class="wrapper">
+
+<h3>Footnotes</h3>
+<ul>
+<li><p id="footnote1">[<a href="#ref1">1</a>] I'm being cheeky of course. I'm not claiming to solve any actually hard (and quite possibly unsolvable) philosophical issues like "what is meaning, really?" or "how can understanding even happen in the first place?" I'm just trying to Socratically reach a simple and clear definition that seems to capture at least some of what we mean by the term "understand".</p></li>
+<li><p id="footnote2">[<a href="#ref2">2</a>] <a href="http://hci.stanford.edu/winograd/shrdlu/name.html">http://hci.stanford.edu/winograd/shrdlu/name.html</a></p></li>
+<li><p id="footnote3">[<a href="#ref3">3</a>] <a href="https://en.wikipedia.org/wiki/Blocks_world">https://en.wikipedia.org/wiki/Blocks_world</a></p></li>
+<li><p id="footnote4">[<a href="#ref4">4</a>] <a href="http://hci.stanford.edu/~winograd/shrdlu/">http://hci.stanford.edu/~winograd/shrdlu/</a></p></li>
+<li><p id="footnote5">[<a href="#ref5">5</a>] see 142. <a href="https://cs.nyu.edu/faculty/davise/papers/GPT3CompleteTests.html">https://cs.nyu.edu/faculty/davise/papers/GPT3CompleteTests.html</a></p></li>
+<li><p id="footnote6">[<a href="#ref6">6</a>] <a href="https://nostalgebraist.tumblr.com/post/628024664310136832/gary-marcus-has-co-authored-a-brief-critique-of">https://nostalgebraist.tumblr.com/post/628024664310136832/gary-marcus-has-co-authored-a-brief-critique-of</a></p></li>
+<li><p id="footnote7">[<a href="#ref7">7</a>] <a href="https://news.ycombinator.com/item?id=24244877">https://news.ycombinator.com/item?id=24244877</a></p></li>
+<li><p id="footnote8">[<a href="#ref8">8</a>] <a href="https://news.ycombinator.com/item?id=24407237">https://news.ycombinator.com/item?id=24407237</a></p></li>
+<li><p id="footnote9">[<a href="#ref9">9</a>] <a href="http://megahal.sourceforge.net/How.html">http://megahal.sourceforge.net/How.html</a></p></li>
+<li><p id="footnote10">[<a href="#ref10">10</a>] Although GPT-3's embeddings are actually on the level of word parts, called BPEs, rather than full words.</p></li>
+<li><p id="footnote11">[<a href="#ref11">11</a>] See <a href="http://dugas.ch/artificial_curiosity/GPT_architecture.html">http://dugas.ch/artificial_curiosity/GPT_architecture.html</a> for a good lay explanation of GPT-3's architecture.</p></li>
+<li><p id="footnote12">[<a href="#ref12">12</a>] <a href="https://www.lesswrong.com/posts/W9rJv26sxs4g2B9bL/transcript-richard-feynman-on-why-questions">https://www.lesswrong.com/posts/W9rJv26sxs4g2B9bL/transcript-richard-feynman-on-why-questions</a></p></li>
+<li><p id="footnote13">[<a href="#ref13">13</a>] Well, actually it's hard to show whether thinking styles are a matter of nature or of nurture: do you choose your thinking styles by developing certain faculties like visualization over time, or does your genetically pre-determined aptitude determine what sorts of thinking you'll prefer to spend your time doing?</p></li>
+<li><p id="footnote14">[<a href="#ref14">14</a>] This can be viewed as an augmented version of Richard J. Riding's Cognitive styles analysis <a href="https://en.wikipedia.org/wiki/Cognitive_styles_analysis">https://en.wikipedia.org/wiki/Cognitive_styles_analysis</a></p></li>
+<li><p id="footnote15">[<a href="#ref15">15</a>] <a href="https://www.psychologytoday.com/us/blog/pristine-inner-experience/201110/not-everyone-conducts-inner-speech">https://www.psychologytoday.com/us/blog/pristine-inner-experience/201110/not-everyone-conducts-inner-speech</a></p></li>
+<li><p id="footnote16">[<a href="#ref16">16</a>] If all this sounds weird, suffice it to say that I'm (very poorly) trying to communicate my personal experience with this mode of thinking, not some theoretical model I've read somewhere.</p></li>
+<li><p id="footnote17">[<a href="#ref17">17</a>] As an interesting anecdote, apparently the discovery of non-symbolic primaries on imageboards is what originally lead to the NPC meme that was popular on the Net a few years back. <a href="https://knowyourmeme.com/memes/npc-wojak">https://knowyourmeme.com/memes/npc-wojak</a></p></li>
+<li><p id="footnote18">[<a href="#ref18">18</a>] There is some controversy on these points, but the critiques do not appear terribly strong to me.</p></li>
+<li><p id="footnote19">[<a href="#ref19">19</a>] <a href="https://openai.com/blog/unsupervised-sentiment-neuron/#sentimentneuron">https://openai.com/blog/unsupervised-sentiment-neuron/#sentimentneuron</a></p></li>
+<li><p id="footnote20">[<a href="#ref20">20</a>] see e.g. Gwern <a href="https://www.gwern.net/newsletter/2020/05#gpt-3">https://www.gwern.net/newsletter/2020/05#gpt-3</a></p></li>
+<li><p id="footnote21">[<a href="#ref21">21</a>] <a href="https://distill.pub/2020/circuits/zoom-in/#openai">https://distill.pub/2020/circuits/zoom-in/#openai</a></p></li>
+<li><p id="footnote22">[<a href="#ref22">22</a>] I do not have systematic evidence on these points. It might be a good idea to generate a large amount of text with GPT-3, then to check 8-gram or 13-gram similarity with texts available online, to get a better grasp of the extent to which GPT-3 may or may not rely on memorization in freeform generation.</p></li>
+<li><p id="footnote23">[<a href="#ref23">23</a>] ~500 billion tokens of input vs. 175 billion parameters, see <a href="https://lambdalabs.com/blog/demystifying-gpt-3/">https://lambdalabs.com/blog/demystifying-gpt-3/</a></p></li>
+<li><p id="footnote24">[<a href="#ref24">24</a>] This is something like a hierarchical hidden Markov model.</p></li>
+<li><p id="footnote25">[<a href="#ref25">25</a>] <a href="https://spectrum.ieee.org/automaton/artificial-intelligence/machine-learning/facebook-ai-director-yann-lecun-on-deep-learning">https://spectrum.ieee.org/automaton/artificial-intelligence/machine-learning/facebook-ai-director-yann-lecun-on-deep-learning</a></p></li>
+<li><p id="footnote26">[<a href="#ref26">26</a>] There are plausible interpretations that are somewhere in the middle. Daniel Dennet has a model where the higher cognitive functions of the brain are a kind of simulation of a sequential computer (similar to a von Neumann machine) running on a massively parallel underlying computer. Is the brain a computer in this sense? Maybe, maybe not. Depends on the details.</p></li>
+<li><p id="footnote27">[<a href="#ref27">27</a>] <a href="https://www.jneurosci.org/content/jneuro/35/27/10005.full.pdf">https://www.jneurosci.org/content/jneuro/35/27/10005.full.pdf</a></p></li>
+<li><p id="footnote28">[<a href="#ref28">28</a>] <a href="https://www.nature.com/articles/srep27755">https://www.nature.com/articles/srep27755</a></p></li>
+</ul>
+</div>
+</section>
+
+</body>
