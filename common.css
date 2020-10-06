@@ -1,0 +1,44 @@
+body {
+    font-family: Book Antiqua, SegoeUI, Segoe UI, serif;
+    font-size: 17px;
+    margin: 0;
+}
+a {
+    color: orangered;
+}
+div.wrapper {
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0.5em 0;
+}
+
+/* HEADER */
+@font-face {
+    font-family: "Alte Schwabacher";
+    src: url("alte-schwabacher.demibold.ttf") format("truetype");
+}
+header {
+    border-bottom: 1px solid lightblue;
+    height: 3em;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+}
+header a {
+    font-family: Calibri, sans-serif;
+    text-decoration: none;
+}
+header a.logo {
+    font-family: Alte Schwabacher, sans-serif;
+    font-size: 2em;
+    margin-top: 0.1em;
+}
+
+div.wrapper, header div {
+    max-width: 90%;
+    width: 50em;
+    margin: 0 auto;    
+}
