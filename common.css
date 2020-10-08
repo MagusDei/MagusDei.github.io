@@ -16,6 +16,7 @@ div.wrapper {
 @font-face {
     font-family: "Alte Schwabacher";
     src: url("alte-schwabacher-demibold-minified.ttf") format("truetype");
+    font-display: swap;
 }
 header {
     border-bottom: 1px solid lightblue;
