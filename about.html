@@ -32,6 +32,8 @@ pre {
     text-align: center;
     font-family: monospace;
     text-rendering: optimizeSpeed;
+    color: rgb(0, 0, 0);
+    line-height: 7px;
 }
 
 </style>
@@ -44,9 +46,10 @@ pre {
 </nav>
 </header>
 
+<section>
 <div class="wrapper" style="text-align: center;">
 
-<pre style=" color: rgb(0, 0, 0); line-height: 7px;">                                   ,*r~:'                                     
+<pre role="img" aria-label="ASCII art of a hooded figure.">                                   ,*r~:'                                     
                                -rcdQQQ0qPV|,                                  
                             !}ZQQQQQQQQEWWGWIv:                               
                           xdQQQQQQQQQQQ85WGGGWqV!                             
@@ -90,15 +93,16 @@ Q@@@@@@@@@@@@@@@@@##QQQQQB#@@@@@@@@@@@@@@@@@@@@@@@@@@@@#8dWWWWWGGGGGGGGGWqXr_
 <p>E-mail me at <span id="mail">magusdei (at) protonmail.com</span></p>
 
 </div>
+</section>
 
 <script>
-mail_element = document.getElementById("mail");
-mail_text = mail_element.textContent.replace(" (at) ", "@");
-a_element = document.createElement("a");
-a_element.setAttribute("href", "mailto:"+mail_text);
-a_element.textContent = mail_text;
-mail_element.textContent = "";
-mail_element.appendChild(a_element);
+    mail_element = document.getElementById("mail");
+    mail_text = mail_element.textContent.replace(" (at) ", "@");
+    a_element = document.createElement("a");
+    a_element.setAttribute("href", "mailto:"+mail_text);
+    a_element.textContent = mail_text;
+    mail_element.textContent = "";
+    mail_element.appendChild(a_element);
 </script>
 <script data-goatcounter="https://mdgoats.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
