@@ -22,7 +22,7 @@ header {
     border-bottom: 1px solid lightblue;
     height: 3em;
 }
-header div {
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -38,7 +38,7 @@ header a.logo {
     margin-top: 0.1em;
 }
 
-div.wrapper, header div {
+div.wrapper, header nav {
     max-width: 90%;
     width: 50em;
     margin: 0 auto;    
