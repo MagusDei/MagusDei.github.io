@@ -11,6 +11,11 @@ div.wrapper {
     text-align: justify;
     padding: 0.5em 0;
 }
+@media (max-width: 480px) {
+    div.wrapper {
+        text-align: left;
+    }
+}
 
 /* HEADER */
 @font-face {
